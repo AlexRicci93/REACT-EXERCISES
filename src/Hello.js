@@ -1,6 +1,7 @@
 import REACT from 'react'
 
-class Hello extends REACT.Component {
+
+export class Hello extends REACT.Component {
 
     render() {
         return  (
