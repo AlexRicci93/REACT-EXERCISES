@@ -2,7 +2,7 @@ import REACT from 'react'
 import { Hello } from './Hello'
 
 
-class App extends REACT.Component {
+export class App extends REACT.Component {
 
     render() {
 
