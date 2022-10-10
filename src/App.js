@@ -18,5 +18,5 @@ export class App extends REACT.Component {
 }
 
 Welcome.defaultProps = {
-    name: "Alex"
+    name: <strong>Alex</strong>
 }
