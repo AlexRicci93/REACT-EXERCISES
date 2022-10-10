@@ -11,12 +11,9 @@ export class App extends REACT.Component {
 
             <div>
                 <Hello/>
-                <Welcome age={29}/>
+                <Welcome name="John" age={29}/>
             </div>
         )
     }
 }
 
-Welcome.defaultProps = {
-    name: <strong>Alex</strong>
-}
