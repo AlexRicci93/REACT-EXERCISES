@@ -1,5 +1,6 @@
 import REACT from 'react'
-import { Message } from './Message'
+import {Message} from "./Message"
+
 
 
 export class Hello extends REACT.Component {
