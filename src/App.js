@@ -1,5 +1,6 @@
 import REACT from 'react'
 import { Hello } from './Hello'
+import { Welcome } from './Welcome'
 
 
 export class App extends REACT.Component {
@@ -10,6 +11,7 @@ export class App extends REACT.Component {
 
             <div>
                 <Hello/>
+                <Welcome name="Alex"/>
             </div>
         )
     }
