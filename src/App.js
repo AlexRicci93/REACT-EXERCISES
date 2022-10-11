@@ -13,7 +13,7 @@ export class App extends REACT.Component {
             <div>
                 <Hello/>
                 <Welcome name="John" age={29}/>
-                <Counter />
+                <Counter initialValue={0} incrementingBy={1} incrementInterval={1000}/>
             </div>
         )
     }
