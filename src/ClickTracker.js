@@ -21,6 +21,8 @@ export class ClickTracker extends React.Component {
 
     }
 
+
+
     render() {
 
         return (
@@ -30,6 +32,7 @@ export class ClickTracker extends React.Component {
                 <button name="ciao" onClick={this.handleTrackerButton}>1</button>
                 <button name="ciaooo" onClick={this.handleTrackerButton}>2</button>
                 <button name="tao" onClick={this.handleTrackerButton}>3</button>
+                
             </div>
         )
     }
