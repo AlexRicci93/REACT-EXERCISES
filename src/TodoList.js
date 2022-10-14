@@ -28,6 +28,18 @@ export class TodoList extends React.Component {
     }
 
 
+
+    handleResetValues = () => {
+
+        this.setState({
+
+            todos: []
+        })
+
+    }
+
+
+
     render() {
 
         return (
@@ -37,6 +49,7 @@ export class TodoList extends React.Component {
                 <form onSubmit={this.handleAddValue}>
                 <input name="input" />
                 <button type="submit">Add Value</button>
+                <button type="button" onClick={this.handleResetValues}>Reset</button>
                 </form>
             </ul>
            
