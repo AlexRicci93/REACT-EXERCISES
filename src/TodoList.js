@@ -38,18 +38,29 @@ export class TodoList extends React.Component {
 
     }
 
+    handleRemoveValue = (todo) => {
+
+        
+        this.setState((state) => {
+
+            return {
+                todos: todo = state.todos.filter((item) => {return item !== todo})
+            }
+        })
 
 
+    }
     render() {
 
         return (
 
             <ul>
-                {this.state.todos.map((todo, index) => <li key={index}> {todo} </li>)}
+                {this.state.todos.map((todo, index) => <li key={index}> {todo} <button onClick={() => this.handleRemoveValue(todo)}>Remove</button> </li>)}
                 <form onSubmit={this.handleAddValue}>
                 <input name="input" />
                 <button type="submit">Add Value</button>
                 <button type="button" onClick={this.handleResetValues}>Reset</button>
+                <button >Remove</button>
                 </form>
             </ul>
            
