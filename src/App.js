@@ -26,7 +26,7 @@ export class App extends REACT.Component {
                 <ClickTracker/>
                 <UncontrolledLogin/>
                 <TodoList/>
-                <Container/>
+                <Container title="Title"/>
             </div>
         )
     }
