@@ -25,7 +25,19 @@ export class App extends REACT.Component {
                 <Login/>
                 <ClickTracker/>
                 <UncontrolledLogin/>
-                <TodoList/>
+                <TodoList render = {(todos, handleRemoveValue) => {
+                    return (
+                        todos.map((todo, index) => (
+                            <li key={index}>
+                            {todo}
+                            <button key={index} onClick={() => {handleRemoveValue(todo)}}>Remove</button>
+                            </li>
+                        ))
+                    )
+                    }
+                    }
+                        
+                />        
                 <Container title="Title"/>
             </div>
         )
