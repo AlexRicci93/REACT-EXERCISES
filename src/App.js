@@ -9,6 +9,7 @@ import { Login } from './Login'
 import { UncontrolledLogin } from './UncontrolledLogin'
 import { TodoList } from './TodoList'
 import { Container } from './Container'
+import { Language } from './Language'
 
 
 export class App extends REACT.Component {
@@ -25,6 +26,7 @@ export class App extends REACT.Component {
                 <Login/>
                 <ClickTracker/>
                 <UncontrolledLogin/>
+                <Language/>
                 <TodoList render = {(todos, handleRemoveValue) => {
                     return (
                         todos.map((todo, index) => (
@@ -37,7 +39,7 @@ export class App extends REACT.Component {
                     }
                     }
                         
-                />        
+                />  
                 <Container title="Title"/>
             </div>
         )
