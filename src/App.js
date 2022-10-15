@@ -8,6 +8,7 @@ import { InteractiveWelcome } from './InteractiveWelcome'
 import { Login } from './Login'
 import { UncontrolledLogin } from './UncontrolledLogin'
 import { TodoList } from './TodoList'
+import { Container } from './Container'
 
 
 export class App extends REACT.Component {
@@ -25,6 +26,7 @@ export class App extends REACT.Component {
                 <ClickTracker/>
                 <UncontrolledLogin/>
                 <TodoList/>
+                <Container/>
             </div>
         )
     }
