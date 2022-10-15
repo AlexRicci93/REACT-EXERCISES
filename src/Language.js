@@ -5,15 +5,32 @@ export const LanguageContext =  createContext('en')
 
 export class Language extends React.Component {
 
+
+    state = {
+
+       language: "en"
+    }
+
+    handleSelectLanguage = (event) =>  {
+
+
+        this.setState({
+            language: event.target.value
+        })
+
+    }
+
+   
+
     render() {
 
         return(
             
             <>
-            <LanguageContext.Provider>
+            <LanguageContext.Provider value={this.state.language}>
             <DisplayLanguage/>
             </LanguageContext.Provider>
-            <select>
+            <select value={this.state.language} onChange={this.handleSelectLanguage}>
             <option value="en">English</option>
             <option value="it">Italiano</option>
             </select>
