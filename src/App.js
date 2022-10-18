@@ -1,6 +1,6 @@
 import REACT from 'react'
 import { Hello } from './Hello'
-// import { Welcome } from './Welcome'
+import { Welcome } from './Welcome'
 import { Counter } from './Counter'
 import { ClickCounter } from './ClickCounter'
 import { ClickTracker } from './ClickTracker'
@@ -10,6 +10,7 @@ import { UncontrolledLogin } from './UncontrolledLogin'
 import { TodoList } from './TodoList'
 import { Container } from './Container'
 import { Language } from './Language'
+import { Sum } from './Sum'
 
 
 export class App extends REACT.Component {
@@ -23,6 +24,7 @@ export class App extends REACT.Component {
                 <InteractiveWelcome/>
                 <Counter initialValue={0} incrementingBy={1} incrementInterval={1000}/>
                 <ClickCounter/>
+                <Welcome/>
                 <Login/>
                 <ClickTracker/>
                 <UncontrolledLogin/>
@@ -41,6 +43,7 @@ export class App extends REACT.Component {
                         
                 />  
                 <Container title="Title"/>
+                <Sum numbers={[1, 2, 3, 4, 5]}/>
             </div>
         )
     }
