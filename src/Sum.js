@@ -1,9 +1,9 @@
 
 
 
-export function Sum(props) {
+export function Sum({numbers=[5, 6, 7]}) {
 
-    const sum = props.numbers.reduce((a,b)=>{
+    const sum = numbers.reduce((a,b)=>{
         return a + b
     })
 
