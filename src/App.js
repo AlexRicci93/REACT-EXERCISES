@@ -11,6 +11,7 @@ import { TodoList } from './TodoList'
 import { Container } from './Container'
 import { Language } from './Language'
 import { Sum } from './Sum'
+import { GithubUser } from './GithubUser'
 
 
 export class App extends REACT.Component {
@@ -46,6 +47,7 @@ export class App extends REACT.Component {
                 />  
                 <Container title="Title"/>
                 <Sum numbers={[1, 2, 3, 4, 5]}/>
+                <GithubUser username="AlexRicci93"/>
             </div>
         )
     }
