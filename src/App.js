@@ -14,7 +14,7 @@ import { Sum } from './Sum'
 import { GithubUser } from './GithubUser'
 import { GithubUserList } from './GithubUserList'
 import { CustomCounter } from './useCounter'
-
+import { FormHook } from './useForm'
 
 export class App extends REACT.Component {
 
@@ -51,6 +51,7 @@ export class App extends REACT.Component {
                 <Sum numbers={[1, 2, 3, 4, 5]}/>
                 <GithubUserList/>
                 <CustomCounter/>
+                <FormHook/>
             </div>
         )
     }
