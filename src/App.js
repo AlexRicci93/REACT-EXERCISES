@@ -11,10 +11,10 @@ import { TodoList } from './TodoList'
 import { Container } from './Container'
 import { Language } from './Language'
 import { Sum } from './Sum'
-import { GithubUser } from './GithubUser'
 import { GithubUserList } from './GithubUserList'
 import { CustomCounter } from './useCounter'
 import { FormHook } from './useForm'
+import { GithubUser } from './GithubUser'
 
 export class App extends REACT.Component {
 
@@ -52,6 +52,8 @@ export class App extends REACT.Component {
                 <GithubUserList/>
                 <CustomCounter/>
                 <FormHook/>
+                <GithubUser username="AlexRicci93"/>
+               
             </div>
         )
     }
