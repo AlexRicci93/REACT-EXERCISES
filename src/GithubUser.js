@@ -4,7 +4,7 @@ import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({username}) {
 
-const {data, fetchData} = useGithubUser(username)
+const {data, loading, error, fetchData} = useGithubUser(username)
 
 
 useEffect(() => {
@@ -13,10 +13,13 @@ useEffect(() => {
 
    }, [username])
 
+
 return(
     
     <div>
     {data && <h1>{data.name}</h1>}
+    {loading && <h1>Loading...</h1>}
+    {error && <h1>There has been an error</h1>}
     </div>
     
 )
