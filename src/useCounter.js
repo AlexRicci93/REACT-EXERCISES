@@ -1,41 +1,40 @@
-import { useState } from "react"
+import { useState, useCallback } from "react"
 
 function useCounter() {
 
 const [counter, setCounter] = useState(0)
 
-function IncrementBy() {
+const IncrementBy = useCallback (function IncrementBy() {
    setCounter((c)=> c + 1 )
-}
+}, [])
 
-function DecrementBY() {
+ const DecrementBy = useCallback (function DecrementBY() {
 
    setCounter((c)=> c - 1)
-       
-   
-}
+         
+}, [])
 
 
-function handleReset()  {
+const handleReset = useCallback(function handleReset() {
    setCounter(0)
-}
+}, [])
 
 return {
 
-    counter, IncrementBy, DecrementBY, handleReset
+    counter, IncrementBy, DecrementBy, handleReset
 }
 
 }
 
 export function CustomCounter() {
 
-    const {counter, IncrementBy, DecrementBY, handleReset} = useCounter()
+    const {counter, IncrementBy, DecrementBy, handleReset} = useCounter()
 
     return (
         <>
         <h2>Count: {counter}</h2>
         <button onClick={IncrementBy}>Increment</button>
-        <button onClick={DecrementBY}>Decrement</button>
+        <button onClick={DecrementBy}>Decrement</button>
         <button onClick={handleReset}>Reset</button>
         </>
     )
