@@ -40,8 +40,8 @@ export function FilteredList() {
 
 
 
-    const lista = useMemo(()=> list.map((obj, index) => 
-    obj.age > 18 ? <p>{obj.name}</p> : <p>{index}</p>), [list])
+    const lista = useMemo(()=> list.map((obj) => obj.age > 18 && <p>{obj.name}</p>), [list])
+   
 
 
     return(
