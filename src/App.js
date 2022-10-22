@@ -15,6 +15,7 @@ import { GithubUserList } from './GithubUserList'
 import { CustomCounter } from './useCounter'
 import { FormHook } from './useForm'
 import { GithubUser } from './GithubUser'
+import { CarDetails } from './CarDetails'
 
 export class App extends REACT.Component {
 
@@ -53,6 +54,7 @@ export class App extends REACT.Component {
                 <CustomCounter/>
                 <FormHook/>
                 <GithubUser username="AlexRicci93"/>
+                <CarDetails initialData={ {model: "BMW", year: "2018", color:"Space Grey"}}/>
                
             </div>
         )
