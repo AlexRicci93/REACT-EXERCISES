@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { LanguageContext } from "./Language";
 
 const translation={
@@ -20,16 +20,13 @@ const translation={
 
 export function DisplayLanguage() {
 
+    const language = useContext(LanguageContext)
+
         return (
             
-            <LanguageContext.Consumer>
-
-               {language => {
-                return(
+        
                     <h1>{translation[language].message}</h1>
-                )
-               }} 
-            </LanguageContext.Consumer>
+                 
             
         )
  
