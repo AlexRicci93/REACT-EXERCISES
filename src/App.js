@@ -15,9 +15,10 @@ export class App extends React.Component {
             <>
             <Routes>
                 <Route path="/" element={<Welcome name="Alex"/>}/>  
-                <Route path="/" element={<Counter/>}/>   
+                <Route path="/counter" element={<Counter/>}/>   
                 <Route path="users/:username" element={<ShowGithubUser/>}/>
             </Routes>
+           
             </>
         )
     }
