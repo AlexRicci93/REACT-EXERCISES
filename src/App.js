@@ -1,65 +1,20 @@
-import REACT from 'react'
-import { Hello } from './Hello'
-import { Welcome } from './Welcome'
-import { Counter } from './Counter'
-import { ClickCounter } from './ClickCounter'
-import { ClickTracker } from './ClickTracker'
-import { InteractiveWelcome } from './InteractiveWelcome'
-import { Login } from './Login'
-import { UncontrolledLogin } from './UncontrolledLogin'
-import { TodoList } from './TodoList'
-import { Container } from './Container'
-import { Language } from './Language'
-import { Sum } from './Sum'
-import { GithubUserList } from './GithubUserList'
-import { CustomCounter } from './useCounter'
-import { FormHook } from './useForm'
-import { GithubUser } from './GithubUser'
-import { CarDetails } from './CarDetails'
-import { FilteredList } from './FilteredList'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Welcome } from "./Welcome";
 
-export class App extends REACT.Component {
+
+
+export class App extends React.Component {
 
     render() {
 
-        return (
+        return(
 
-            <div>
-                <Hello/>
-                <InteractiveWelcome/>
-                <Counter initialValue={0} incrementingBy={1} incrementInterval={1000}/>
-                <ClickCounter onCounterChange={(counter)=> {
-                    return console.log(counter)
-                }}/>
-                <Welcome/>
-                <Login/>
-                <ClickTracker/>
-                <UncontrolledLogin/>
-                <Language/>
-                <TodoList render = {(todos, handleRemoveValue) => {
-                    return (
-                        todos.map((todo, index) => (
-                            <li key={index}>
-                            {todo}
-                            <button key={index} onClick={() => {handleRemoveValue(todo)}}>Remove</button>
-                            </li>
-                        ))
-                    )
-                    }
-                    }
-                        
-                />  
-                <Container title="Title"/>
-                <Sum numbers={[1, 2, 3, 4, 5]}/>
-                <GithubUserList/>
-                <CustomCounter/>
-                <FormHook/>
-                <GithubUser username="AlexRicci93"/>
-                <CarDetails initialData={ {model: "BMW", year: "2018", color:"Space Grey"}}/>
-                <FilteredList />
-               
-            </div>
+            <>
+            <Routes>
+                <Route path="/" element={<Welcome name="Alex"/>}/>    
+            </Routes>
+            </>
         )
     }
 }
-
