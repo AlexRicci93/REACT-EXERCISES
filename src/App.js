@@ -12,7 +12,8 @@ export class App extends React.Component {
 
             <>
             <Routes>
-                <Route path="/" element={<Welcome name="Alex"/>}/>    
+                <Route path="/" element={<Welcome name="Alex"/>}/>  
+                <Route path="/" element={<Counter/>}/>   
             </Routes>
             </>
         )
