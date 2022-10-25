@@ -21,13 +21,14 @@ export class App extends React.Component {
                 {/* <Route path="users/:username" element={<ShowGithubUser/>}/> */}
                 <Route path="*" element={<div>Not found</div>}/>
                 <Route path="/users" element={<GithubUserList/>}>
+                    <Route index element={<h2>Add a user and select it</h2>}/>
                     <Route path=":username" element={<ShowGithubUser/>}/>
                 </Route>
             </Routes>
         <div style={{display: 'flex', justifyContent:'space-around'}}>
-           <Link to="./" style={{textDecoration: 'none', color: 'maroon'}}><h2>Home</h2></Link>
-           <Link to="./counter" style={{textDecoration: 'none', color: 'maroon'}}><h2>Counter</h2></Link>
-           <Link to="users/:username" style={{textDecoration: 'none', color: 'maroon' }}><h2>User</h2></Link>
+           <Link to="/" style={{textDecoration: 'none', color: 'maroon'}}><h2>Home</h2></Link>
+           <Link to="/counter" style={{textDecoration: 'none', color: 'maroon'}}><h2>Counter</h2></Link>
+           <Link to="/users" style={{textDecoration: 'none', color: 'maroon' }}><h2>User</h2></Link>
            
         </div>
             </>
