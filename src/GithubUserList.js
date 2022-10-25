@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
-import { GithubUser } from "./GithubUser"
-
+import { useEffect, useState } from "react";
+import { GithubUser } from "./GithubUser";
+import { Link, Outlet } from "react-router-dom";
 
 
 
@@ -33,7 +33,10 @@ export function GithubUserList() {
 
         <div>
             {array.map((user, index) => (
-                <GithubUser  username={user} key={index}/>
+                <>
+                <Link to={user}>{user}</Link>
+                <Outlet/>
+                </>
             ))}
         </div>
 
