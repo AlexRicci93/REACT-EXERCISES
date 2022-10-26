@@ -4,14 +4,9 @@ import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({username}) {
 
-const {data, loading, error, fetchData} = useGithubUser(username)
+const {data, loading, error} = useGithubUser(username)
 
 
-useEffect(() => {
-
-    fetchData(username)
-
-   }, [username])
 
 
 return(

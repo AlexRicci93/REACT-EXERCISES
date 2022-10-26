@@ -34,7 +34,7 @@ export function GithubUserList() {
         <div>
             {array.map((user, index) => (
                 <>
-                <Link to={user}>{user}</Link>
+                <Link key={index}to={user}>{user}</Link>
                 <Outlet/>
                 </>
             ))}
