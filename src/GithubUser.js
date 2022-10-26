@@ -4,7 +4,7 @@ import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser({username}) {
 
-const {data, loading, error} = useGithubUser(username)
+const {data, loading, error, fetchData} = useGithubUser(username)
 
 
 
@@ -15,6 +15,7 @@ return(
     {data && <h1>{data.name}</h1>}
     {loading && <h1>Loading...</h1>}
     {error && <h1>There has been an error</h1>}
+    <button onClick={fetchData}>Refresh</button>
     </div>
     
 )
